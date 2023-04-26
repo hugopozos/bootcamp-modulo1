@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+        <meta name="description" content="Segundo ejercicio de la sesion 1">
+        <title>Ejercicio 2</title>        
+    </head>
+    <body>
+        <h2>Formulario de contacto</h2>
+        <br>
+        <form action="#" method="post">
+            <label for="nombre">Nombre:</label>
+            <input type="text" name="nombre" placeholder="Ingrese su nombre" minlength="2" maxlength="50" required>
+            <br>
+            <label for="email">Correo electrónico:</label>
+            <input type="email" name="email" placeholder="Ingrese su correo electrónico" required>
+            <br>
+            <label for="contraseña">Contraseña:</label>
+            <input type="password" name="contraseña" placeholder="Ingrese su contraseña" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
+            <br>
+            <fieldset>
+                <legend>Tema:</legend>
+                <label><input type="radio" name="consulta" value="consulta" required>Consulta</label>
+                <label><input type="radio" name="sugerencia" value="sugerencia" required>Sugerencia</label>
+                <label><input type="radio" name="problema" value="problema" required>Problema</label>
+            </fieldset>
+            <br>
+            <label for="mensaje">Mensaje:</label>
+            <textarea name="mensaje" placeholder="Escriba su mensaje aquí" minlength="10" maxlength="500" required></textarea>
+            <br>
+            <input type="submit" value="Enviar">            
+        </form>
+    
+    </body>
+</html>
