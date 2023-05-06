@@ -1,12 +1,16 @@
 <script>
 import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
+import TestComponent from "./components/TestComponent.vue";
+import MathComponent from "./components/MathComponent.vue";
 
 export default {
   components: {
     HelloWorld,
     RouterLink,
-    RouterView
+    RouterView,
+    TestComponent,
+    MathComponent
   },
   data(){
       return {
@@ -31,20 +35,21 @@ export default {
     <div class="wrapper">
       <HelloWorld v-bind:class="{hide: isHide}" msg="You did it!" />
         <button @click="toggle">Cambiar</button>
-
         <ul>
             <li v-for="item in items" :key="item">{{ item }}</li>
-
         </ul>
+        <nav>
+          <RouterLink to="/">Home</RouterLink>
+          <RouterLink to="/about">About</RouterLink>
+        </nav>
+          <TestComponent></TestComponent>
+          <MathComponent></MathComponent>
 
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
+
     </div>
   </header>
 
-  <RouterView />
+  <RouterView/>
 </template>
 <!--------------------------------------------------------------------------------------------------------->
 <style scoped>

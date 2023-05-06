@@ -7,7 +7,9 @@ export default defineComponent({
         return {
             something: 'Probando'
         }
-    }
+    },
+
+
 })
 </script>
 
